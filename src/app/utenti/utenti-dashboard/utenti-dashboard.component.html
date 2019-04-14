@@ -1,0 +1,11 @@
+
+<mat-toolbar  class="toolbar">
+    <button mat-raised-button routerLink="addCustomer" color="primary">Add customer</button>
+    <button mat-raised-button color="primary" (click)="OnSave()">Save</button>
+    <button mat-raised-button color="primary" (click)="OnLoad()">Load</button>
+    <button mat-raised-button routerLink="listCustomers" color="primary">List</button>
+
+</mat-toolbar>
+<!-- <app-customers-list></app-customers-list> -->
+<!-- <app-customers-table></app-customers-table> -->
+<router-outlet></router-outlet>

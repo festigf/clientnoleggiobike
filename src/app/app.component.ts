@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'noleggiobike';
+  @HostListener('window:beforeunload', ['$event'])
+  beforeunloadHandler(event) {
+    this.authService.onLogout();
+  }
+  constructor(private authService: AuthService){}
+
 }
