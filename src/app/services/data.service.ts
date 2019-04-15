@@ -17,7 +17,7 @@ export class DataService {
 
     login(userInfo: User) {
       const data = 'username=' + encodeURIComponent(userInfo.username) + '&password=' + encodeURIComponent(userInfo.password);
-      const headers = new HttpHeaders({ 'Content-type': 'application/x-www-form-urlencoded' });
+      const headers = new HttpHeaders({'Content-type': 'application/x-www-form-urlencoded'});
       console.log(this.url + 'login');
       return this.http.post(this.url + 'login', data, {headers});
     }
