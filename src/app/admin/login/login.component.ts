@@ -11,7 +11,7 @@ import { fbind } from 'q';
 export class LoginComponent implements OnInit {
 
   formLogin: FormGroup;
-  constructor(private authService: AuthService, fb: FormBuilder) {
+  constructor(public authService: AuthService, fb: FormBuilder) {
     this.formLogin = fb.group({
       username : ['', Validators.required],
       password : ['', Validators.required]

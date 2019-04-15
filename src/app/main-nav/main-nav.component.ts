@@ -17,6 +17,6 @@ export class MainNavComponent {
     );
 
   constructor(private breakpointObserver: BreakpointObserver,
-                      authService: AuthService) {}
+              public authService: AuthService) {}
 
 }
