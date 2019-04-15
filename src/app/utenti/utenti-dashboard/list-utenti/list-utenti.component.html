@@ -1,3 +1,13 @@
-<p>
-  list-utenti works!
-</p>
+<mat-nav-list>
+
+    <mat-list-item *ngFor="let utente of utenti$ | async;last as last">
+        <mat-icon mat-list-icon>folder</mat-icon>
+        <h5 mat-line>{{utente.cognome}}</h5>
+        <p mat-line > {{utente.mail}}  {{utente.role}}</p>
+        <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+     </mat-list-item>
+
+
+  </mat-nav-list>
+
+  
