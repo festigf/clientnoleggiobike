@@ -8,11 +8,11 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class ListUtentiComponent implements OnInit {
   utenti$;
+ 
   constructor(public dataService: DataService) { 
     this.utenti$ = this.dataService.getUtenti();
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }
